@@ -11,3 +11,6 @@ Feature: Page structure
 		Given I am on the homepage
 		Then I should see "Sign Up"
 		And I should see "Sign In"
+
+
+
