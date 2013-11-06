@@ -28,6 +28,12 @@ set :views, File.join(File.dirname(__FILE__), '..', 'views')
 		redirect to('/')
 	end
 
+	get '/tags/:text' do
+		tag = Tag.first(:text => params[:text])
+		@links = tag ? tag.links : []
+		erb :index
+	end
+
 
   # start the server if ruby file executed directly
   run! if app_file == $0
