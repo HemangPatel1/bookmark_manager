@@ -5,4 +5,11 @@ Given(/^I have saved the following links:$/) do |links|
 		fill_in(:tags, :with => link['tags'])
 		click_button 'Add Link'
   end
+end 
+
+
+When(/^I search for "(.*?)"$/) do |arg1|
+#	tags.hashes.each do |tag|
+	fill_in(:text, :with => 'education')
+#	click_button 'Search'
 end
