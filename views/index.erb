@@ -1,7 +1,13 @@
 <h1>Current links:</h1>
 <ul>
   <% @links.each do |link| %>
-    <li><a href="<%= link.url %>"><%= link.title %></a></li>
+	  <li><a href="<%= link.url %>"><%= link.title %></a>
+	  
+	  <% link.tags.each do |tag| %>
+	  <%= tag.text %>
+	  <% end %>
+	  
+	  </li>
   <% end %>
 </ul>
 
@@ -12,4 +18,11 @@
     Tags: <input type="text" name="tags">
     <input type="submit" value="Add Link">
   </form>
+
+  <br>
+
+  <form action="/tags/:text">
+    <input type="text" name="tags">
+  </form>
+
 </div>
