@@ -5,10 +5,9 @@ Feature: Filtering links
 
 	Scenario: Filtering a link
 		Given I am on the homepage
-		When I search for "education"
-		And I have saved the following links:
+		When I have saved the following links:
 			| title			| url				| tag			|
-			| Makers Academy	| http://www.makersacademy.com	| education		|
-		Then I should see "Makers Academy"
+			| Google                | http://www.google.com		| search engine		|
+		And I search for "search"
+		Then I should see "Google" in tags/search
 
-		# wtf?! can't just create a random webstep for then i should see makers academy because that step should only pass if its true!!!!!!!!!!!!!!!!!!!!

@@ -1,13 +1,13 @@
 <h1>Current links:</h1>
 <ul>
   <% @links.each do |link| %>
-	  <li><a href="<%= link.url %>"><%= link.title %></a>
+    <li><a href="<%= link.url %>"><%= link.title %></a>
 	  
-	  <% link.tags.each do |tag| %>
-	  <%= tag.text %>
-	  <% end %>
+        <% link.tags.each do |tag| %>
+        <%= tag.text %>
+      <% end %>
 	  
-	  </li>
+    </li>
   <% end %>
 </ul>
 
@@ -20,10 +20,17 @@
   </form>
 
   <br>
+</div>
 
-  <form action="/tags/search">
-    <input type="text" name="text">
-    <input type="submit" value"Search">
+<div>
+<!--
+  <form action="/tags/<#%= tag.text %>" method="get">
+    <input type="text" name="<#%= tag.text %>">
+    <input type="submit" value="Search">
   </form>
+ -->
 
+ <form action="/search" method="post">
+	 <input type="text" name="text">
+	 <input type="submit" value="Search">
 </div>

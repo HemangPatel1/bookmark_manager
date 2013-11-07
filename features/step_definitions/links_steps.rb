@@ -10,6 +10,7 @@ end
 
 When(/^I search for "(.*?)"$/) do |arg1|
 #	tags.hashes.each do |tag|
-	fill_in(:text, :with => 'education')
-#	click_button 'Search'
+	fill_in(:text, :with => 'search')
+	click_button 'Search'
 end
+
