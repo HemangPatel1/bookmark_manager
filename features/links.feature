@@ -9,4 +9,3 @@ Feature: Viewing links
 			| title			| url				|
 			| Makers Academy	| http://www.makersacademy.com	|
 		Then I should see "Makers Academy"
-
